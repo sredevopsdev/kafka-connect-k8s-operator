@@ -17,15 +17,15 @@ package provider
 import (
 	"testing"
 
-	"github.com/amadeusitgroup/kubernetes-kafka-connect-operator/pkg/apis/kafkaconnect/v1alpha1"
-	kafkaconnectv1alpha1 "github.com/amadeusitgroup/kubernetes-kafka-connect-operator/pkg/apis/kafkaconnect/v1alpha1"
-	"github.com/amadeusitgroup/kubernetes-kafka-connect-operator/pkg/custommetrics"
 	k8sprovider "github.com/kubernetes-incubator/custom-metrics-apiserver/pkg/provider"
+	"github.com/sredevopsdev/kafka-connect-k8s-operator/pkg/apis/kafkaconnect/v1alpha1"
+	kafkaconnectv1alpha1 "github.com/sredevopsdev/kafka-connect-k8s-operator/pkg/apis/kafkaconnect/v1alpha1"
+	"github.com/sredevopsdev/kafka-connect-k8s-operator/pkg/custommetrics"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/kubernetes/scheme"
 
-	listers "github.com/amadeusitgroup/kubernetes-kafka-connect-operator/pkg/generated/listers/kafkaconnect/v1alpha1"
+	listers "github.com/sredevopsdev/kafka-connect-k8s-operator/pkg/generated/listers/kafkaconnect/v1alpha1"
 )
 
 func TestReturnsCustomMetric(t *testing.T) {

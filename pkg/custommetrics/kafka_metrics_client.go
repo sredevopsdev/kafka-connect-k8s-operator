@@ -21,9 +21,9 @@ import (
 	"sync"
 
 	kafka "github.com/Shopify/sarama"
-	kafkaconnectv1alpha1 "github.com/amadeusitgroup/kubernetes-kafka-connect-operator/pkg/apis/kafkaconnect/v1alpha1"
-	kcc "github.com/amadeusitgroup/kubernetes-kafka-connect-operator/pkg/kafkaconnectclient"
 	"github.com/kubernetes-incubator/custom-metrics-apiserver/pkg/provider"
+	kafkaconnectv1alpha1 "github.com/sredevopsdev/kafka-connect-k8s-operator/pkg/apis/kafkaconnect/v1alpha1"
+	kcc "github.com/sredevopsdev/kafka-connect-k8s-operator/pkg/kafkaconnectclient"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/types"

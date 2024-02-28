@@ -1,8 +1,8 @@
-[![Build Status](https://api.travis-ci.org/AmadeusITGroup/Kubernetes-Kafka-Connect-Operator.svg?branch=master)](https://api.travis-ci.org/AmadeusITGroup/Kubernetes-Kafka-Connect-Operator.svg?branch=master)
-[![Go Report Card](https://goreportcard.com/badge/github.com/amadeusitgroup/Kubernetes-Kafka-Connect-Operator)](https://goreportcard.com/report/github.com/amadeusitgroup/Kubernetes-Kafka-Connect-Operator)
-[![license](https://img.shields.io/github/license/AmadeusITGroup/Kubernetes-Kafka-Connect-Operator.svg?style=flat-square)](LICENSE)
+[![Build Status](https://api.travis-ci.org/sredevopsdev/kafka-connect-k8s-operator.svg?branch=master)](https://api.travis-ci.org/sredevopsdev/kafka-connect-k8s-operator.svg?branch=master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/sredevopsdev/kafka-connect-k8s-operator)](https://goreportcard.com/report/github.com/sredevopsdev/kafka-connect-k8s-operator)
+[![license](https://img.shields.io/github/license/sredevopsdev/kafka-connect-k8s-operator.svg?style=flat-square)](LICENSE)
 
-# Kubernetes-Kafka-Connect-Operator
+# Kafka-Connect-K8s-Operator
 
 A kubernetes operator to deploy and auto-scale KafkaConnect Application.
 

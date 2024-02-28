@@ -15,7 +15,7 @@
 package apis
 
 import (
-	"github.com/amadeusitgroup/kubernetes-kafka-connect-operator/pkg/apis/kafkaconnect/v1alpha1"
+	"github.com/sredevopsdev/kafka-connect-k8s-operator/pkg/apis/kafkaconnect/v1alpha1"
 )
 
 func init() {

@@ -10,10 +10,10 @@ import (
 
 	// Import all Kubernetes client auth plugins (e.g. Azure, GCP, OIDC, etc.)
 
-	"github.com/amadeusitgroup/kubernetes-kafka-connect-operator/pkg/apis"
-	"github.com/amadeusitgroup/kubernetes-kafka-connect-operator/pkg/controller"
+	"github.com/sredevopsdev/kafka-connect-k8s-operator/pkg/apis"
+	"github.com/sredevopsdev/kafka-connect-k8s-operator/pkg/controller"
 
-	"github.com/amadeusitgroup/kubernetes-kafka-connect-operator/version"
+	"github.com/sredevopsdev/kafka-connect-k8s-operator/version"
 
 	"github.com/operator-framework/operator-sdk/pkg/k8sutil"
 	"github.com/operator-framework/operator-sdk/pkg/leader"
@@ -87,7 +87,7 @@ func main() {
 
 	ctx := context.TODO()
 	// Become the leader before proceeding
-	err = leader.Become(ctx, "kubernetes-kafka-connect-operator-lock")
+	err = leader.Become(ctx, "kafka-connect-k8s-operator-lock")
 	if err != nil {
 		klog.Error(err, "")
 		os.Exit(1)

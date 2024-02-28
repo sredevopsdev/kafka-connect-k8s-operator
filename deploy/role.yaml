@@ -2,17 +2,17 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   creationTimestamp: null
-  name: kubernetes-kafka-connect-operator
+  name: kafka-connect-k8s-operator
 rules:
 - apiGroups:
-    - metrics.k8s.io
+  - metrics.k8s.io
   resources:
-    - pods
-    - nodes
+  - pods
+  - nodes
   verbs:
-    - get
-    - list
-    - watch
+  - get
+  - list
+  - watch
 - apiGroups:
   - ""
   resources:
@@ -60,7 +60,7 @@ rules:
 - apiGroups:
   - apps
   resourceNames:
-  - kubernetes-kafka-connect-operator
+  - kafka-connect-k8s-operator
   resources:
   - deployments/finalizers
   verbs:

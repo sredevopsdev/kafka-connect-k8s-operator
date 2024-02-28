@@ -8,15 +8,15 @@ services:
 env:
   global:
   - TAG=${TRAVIS_TAG:=${TRAVIS_COMMIT}}
-  - GH_URL=https://amadeusitgroup.github.io/Kubernetes-Kafka-Connect-Operator
+  - GH_URL=https://sredevopsdev.github.io/Kafka-Connect-K8s-Operator
   matrix:
   - CLUSTER=openshift
   - CLUSTER=kubernetes
 
-go_import_path: github.com/amadeusitgroup/Kubernetes-Kafka-Connect-Operator
+go_import_path: github.com/sredevopsdev/kafka-connect-k8s-operator
 
 cache:
   directories:
-    - $HOME/.cache/go-build
+  - $HOME/.cache/go-build
 go:
 - 1.13.x

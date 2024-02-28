@@ -1,20 +1,22 @@
 # Kafka Connect Operator User Guide
 
-This guide walks through of using the Kubernetes-Kafka-Connect-Operator, 
+This guide walks through of using the Kafka-Connect-K8s-Operator,
 
 ## Prerequisites
+
 - [kubectl][kubectl_tool] version v1.12.0+.
 - Access to a Kubernetes v1.12.0+ cluster.
 
 ## Using a KafkaConnect
-This operator run kafka connect clusters in Kubernetes platform. 
+
+This operator run kafka connect clusters in Kubernetes platform.
 The kafka connect clusters are deployed by kubernetes `Deployement` objects generated from the objects of the `KafkaConnect` custom resource type.
 
 This operator also expose the kafka connect rest api as a service and an ingress object
 
 This operator can also expose the connector lag via the new kubernetes custom metrics API (optional)
 
-The most common way of using a `KafkaConnect` is store the `KafkaConnect` specification in a YAML file. 
+The most common way of using a `KafkaConnect` is store the `KafkaConnect` specification in a YAML file.
 
 For more information, check the [API Specification](docs/api-docs.md).
 
@@ -39,7 +41,7 @@ spec:
     connectorConfigs:
       - name: connector-elastic
         exposeLagMetric: true
-        url: https://raw.githubusercontent.com/amadeusitgroup/kubernetes-kafka-connect-operator/master/connector-examples/connector1.json
+        url: https://raw.githubusercontent.com/sredevopsdev/kafka-connect-k8s-operator/master/connector-examples/connector1.json
   podSpec:
     containers:
       - name: kafkaconnect
@@ -102,6 +104,7 @@ spec:
 ```
 
 ## Using a KafkaconnectAutoScaler
+
 This operator can also auto-scale Kafka Connect clusters by using the scale api of deployment objects and the connector's task by using the kafka connect cluster's api
 
 The algo to auto-scale kafka connector task number is same as the [Kubernetes Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) and base on the `taskPerPod` value in a `KafkaConnect` object spec the `Deployment`'s replicas (`Pod` number) will also be updated proportionally.

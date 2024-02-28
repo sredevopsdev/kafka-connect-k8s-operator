@@ -17,8 +17,8 @@
 package kafkaconnect
 
 import (
-	internalinterfaces "github.com/amadeusitgroup/kubernetes-kafka-connect-operator/pkg/generated/informers/externalversions/internalinterfaces"
-	v1alpha1 "github.com/amadeusitgroup/kubernetes-kafka-connect-operator/pkg/generated/informers/externalversions/kafkaconnect/v1alpha1"
+	internalinterfaces "github.com/sredevopsdev/kafka-connect-k8s-operator/pkg/generated/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/sredevopsdev/kafka-connect-k8s-operator/pkg/generated/informers/externalversions/kafkaconnect/v1alpha1"
 )
 
 // Interface provides access to each of this group's versions.

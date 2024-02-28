@@ -1,41 +1,41 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubernetes-kafka-connect-operator
+  name: kafka-connect-k8s-operator
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: kubernetes-kafka-connect-operator
+      name: kafka-connect-k8s-operator
   template:
     metadata:
       labels:
-        name: kubernetes-kafka-connect-operator
+        name: kafka-connect-k8s-operator
     spec:
-      serviceAccountName: kubernetes-kafka-connect-operator
+      serviceAccountName: kafka-connect-k8s-operator
       containers:
-        - name: kubernetes-kafka-connect-operator
-          # Replace this with the built image name
-          image: docker.io/kafkaconnect/k8s-operator:latest
-          command:
-          - Kubernetes-Kafka-Connect-Operator
-          imagePullPolicy: Always
-          ports:
-          - containerPort: 6443
-            name: https
-          - containerPort: 8080
-            name: http
-          env:
-            - name: WATCH_NAMESPACE
-              valueFrom:
-                fieldRef:
-                  fieldPath: metadata.namespace
-            - name: POD_NAME
-              valueFrom:
-                fieldRef:
-                  fieldPath: metadata.name
-            - name: OPERATOR_NAME
-              value: "kubernetes-kafka-connect-operator"
+      - name: kafka-connect-k8s-operator
+        # Replace this with the built image name
+        image: docker.io/kafkaconnect/k8s-operator:latest
+        command:
+        - Kafka-Connect-K8s-Operator
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 6443
+          name: https
+        - containerPort: 8080
+          name: http
+        env:
+        - name: WATCH_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: OPERATOR_NAME
+          value: "kafka-connect-k8s-operator"
 
 ---
 apiVersion: apiregistration.k8s.io/v1
@@ -44,7 +44,7 @@ metadata:
   name: v1beta2.custom.metrics.k8s.io
 spec:
   service:
-    name: kubernetes-kafka-connect-operator-svc
+    name: kafka-connect-k8s-operator-svc
     namespace: default
   group: custom.metrics.k8s.io
   version: v1beta2
@@ -56,7 +56,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: kubernetes-kafka-connect-operator-svc
+  name: kafka-connect-k8s-operator-svc
 spec:
   ports:
   - name: https
@@ -66,4 +66,4 @@ spec:
     port: 80
     targetPort: 8080
   selector:
-    name: kubernetes-kafka-connect-operator
+    name: kafka-connect-k8s-operator

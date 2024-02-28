@@ -246,7 +246,7 @@ func CreateFakeKafkaConnect() *KafkaConnect {
 		parentDomain                        = "apps-crc.testing"
 		taskPerPod      int32               = 1
 		connectorName                       = "connector-elastic"
-		connectorURL                        = "https://raw.githubusercontent.com/amadeusitgroup/kubernetes-kafka-connect-operator/master/connector-examples/connector1.json"
+		connectorURL                        = "https://raw.githubusercontent.com/sredevopsdev/kafka-connect-k8s-operator/master/connector-examples/connector1.json"
 		image                               = "test/kafkaconnectdockerimage:latest"
 		imagePullPolicy corev1.PullPolicy   = "IfNotPresent"
 		resourceLimits  corev1.ResourceList = map[corev1.ResourceName]resource.Quantity{
