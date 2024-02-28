@@ -1,4 +1,4 @@
-module github.com/amadeusitgroup/kubernetes-kafka-connect-operator
+module github.com/sredevopsdev/kafka-connect-k8s-operator
 
 go 1.13
 
