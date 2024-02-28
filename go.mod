@@ -1,6 +1,6 @@
 module github.com/sredevopsdev/kafka-connect-k8s-operator
 
-go 1.13
+go 1.21
 
 require (
 	github.com/Shopify/sarama v1.26.1
@@ -18,7 +18,7 @@ require (
 	k8s.io/client-go v12.0.0+incompatible
 	k8s.io/klog v1.0.0
 	k8s.io/kube-openapi v0.0.0-20200413232311-afe0b5e9f729 // indirect
-	k8s.io/kubernetes v1.16.2
+	k8s.io/kubernetes v0.0.0
 	k8s.io/metrics v0.0.0
 	sigs.k8s.io/controller-runtime v0.4.0
 	sigs.k8s.io/yaml v1.2.0 // indirect
